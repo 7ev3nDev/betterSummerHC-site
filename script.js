@@ -1,13 +1,16 @@
-const main = document.querySelector('main');
+const body = document.querySelector('body');
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowDown') {
-        main.classList.add('active');
+        body.classList.add('active');
     }
 });
 document.addEventListener('wheel', (event) => {
     if (event.deltaY > 0) {
-        main.classList.add('active');
+        body.classList.add('active');
     }
 });
 
+document.addEventListener('touchmove', () => {
+    body.classList.add('active');
+});
